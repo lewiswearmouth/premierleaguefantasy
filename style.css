@@ -1,11 +1,19 @@
-html, body {
+html {
+    font-size: 120%; /* Base scale for all rem/em units */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+body {
+    background-color: #FFF8DC;
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans';
-    background-color: #FFF8DC;
     box-sizing: border-box;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 *, *::before, *::after {
@@ -16,14 +24,14 @@ header {
     background: rgb(218, 41, 28);
     padding: 12px;
     position: relative;
-    width: 100%;
+    width: 100%;          /* fill viewport width */
     margin: 0 auto;
 }
 
 #banner {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
 }
 
 h1 {
@@ -40,7 +48,6 @@ h1 {
 #logoImage {
     margin-right: 24px;
 }
-
 #logoImage2 {
     margin-left: 24px;
 }
@@ -49,6 +56,75 @@ h1 {
     color: white;
     margin: 0;
     font-size: 48px;
+}
+
+#bodyBackground{
+    background-color: #F5C6C6;
+    border: 3px solid black;
+    padding: 12px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+#winnerImage {
+    width: 100%;
+    max-width: 468px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid black; /* 👈 Add this line for border */
+    border-radius: 8px;       /* Optional: rounded corners */
+}
+
+#tableTitle {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#ChampionsLeague {
+    color: blue;
+}
+
+#EuropaLeague {
+    color: #E76F51;
+}
+
+#ConferenceLeague {
+    color: #2A9D8F;
+}
+
+#tableBackground {
+    background-color: #F5C6C6;
+    border: 3px solid black;
+    padding: 12px;
+    width: 100%;
+    position: relative;
+}
+
+#legend {
+    position: absolute;
+    bottom: 24.6px; /* 18px × 1.2 */
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4px;
+    padding: 5px 10px;
+    border-radius: 4.8px;
+}
+
+#key1, #key2, #key3, #key4 {
+    margin: 0;
+}
+#key1 {
+    color: blue;
+}
+#key2 {
+    color: #E76F51;
+}
+#key3 {
+    color: #2A9D8F;
 }
 
 #container {
@@ -63,61 +139,21 @@ h1 {
     align-items: center;
     padding: 24px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1440px; /* 1200px × 1.2 */
     margin: 0 auto;
     gap: 18px;
 }
 
 #textContent {
     width: 100%;
-    max-width: 660px;
+    max-width: 660px; /* 550px × 1.2 */
     padding: 0 12px;
     margin: 0 auto;
 }
 
-/* Example content boxes */
-#bodyBackground,
-#tableBackground {
-    background-color: #F5C6C6;
-    border: 3px solid black;
-    padding: 12px;
-    width: 100%;
-}
-
-#winnerImage {
-    width: 100%;
-    max-width: 468px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border: 3px solid black;
-    border-radius: 8px;
-}
-
-/* Legend */
-#legend {
-    position: absolute;
-    bottom: 21.6px;
-    right: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4px;
-    font-size: 1.08em;
-    padding: 5px 10px;
-    border-radius: 4.8px;
-}
-
-#key1, #key2, #key3 {
-    margin: 0;
-}
-
-#key1 { color: blue; }
-#key2 { color: #E76F51; }
-#key3 { color: #2A9D8F; }
-
-/* Mobile Styles */
+/* MOBILE STYLES */
 @media (max-width: 600px) {
+    /* Reset margins, paddings and width for container elements */
     #container,
     #contentContainer1,
     #textContent {

@@ -118,22 +118,30 @@ h1 {
     #contentContainer1 {
         flex-direction: column;
         align-items: center;
-        height: auto; /* Let it size naturally */
-        padding: 2vh 2vw;
-        gap: 2vh;
+        height: 100vh;
+        overflow: hidden;
+        padding: 1vh;
+        gap: 1vh;
     }
 
     #textContent {
         width: 90vw;
-        max-width: none;
-        max-height: none;
-        overflow: visible;
+        max-height: 60vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        box-sizing: border-box;
+    }
+
+    #bodyBackground, #tableBackground {
+        padding: 1vh;
     }
 
     #winnerImage {
-        width: 70vw;
-        height: auto;
+        width: 60vw;
         max-height: 30vh;
+        height: auto;
         object-fit: contain;
     }
 
@@ -147,9 +155,10 @@ h1 {
     }
 
     #legend {
-        position: static; /* Remove absolute positioning on small screens */
-        align-items: flex-start;
-        background-color: transparent;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 1vh;
+        margin-right: 1vw;
     }
 }

@@ -48,6 +48,7 @@ h1 {
     padding: 1vh;
     gap: 2vw;
     box-sizing: border-box;
+    margin-top: 3vh;
 }
 
 /* Text section */
@@ -113,27 +114,27 @@ h1 {
 #key2 { color: orange; }
 #key3 { color: rgb(111, 201, 111); }
 
-/* Make layout stack vertically on very narrow devices */
 @media (max-width: 600px) {
     #contentContainer1 {
         flex-direction: column;
         align-items: center;
-        height: auto;
-    }
-
-    #textContent, #winnerImage {
-        max-width: 90vw;
-        width: 90vw;
-    }
-
-    #winnerImage {
-        height: 30vh;
-        margin-bottom: 2vh;
+        height: auto; /* Let it size naturally */
+        padding: 2vh 2vw;
+        gap: 2vh;
     }
 
     #textContent {
-        max-height: calc(100vh - 45vh); /* header + image + margin */
-        overflow-y: auto;
+        width: 90vw;
+        max-width: none;
+        max-height: none;
+        overflow: visible;
+    }
+
+    #winnerImage {
+        width: 70vw;
+        height: auto;
+        max-height: 30vh;
+        object-fit: contain;
     }
 
     #logoImage, #logoImage2 {
@@ -143,5 +144,12 @@ h1 {
 
     #winnerName {
         font-size: 3vh;
+    }
+
+    #legend {
+        position: static; /* Remove absolute positioning on small screens */
+        align-items: flex-start;
+        background-color: transparent;
+        padding: 0;
     }
 }

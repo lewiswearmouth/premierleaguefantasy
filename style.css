@@ -1,3 +1,7 @@
+html {
+    font-size: 120%; /* Base scale for all rem/em units */
+}
+
 body {
     background-color: rgb(251, 225, 34);
     margin: 0;
@@ -6,12 +10,12 @@ body {
 
 header {
     background: rgb(218, 41, 28);
-    padding: 10px 10px;
+    padding: 12px 12px;
     position: relative;
 }
 
 #banner {
-    font-size: 20px;
+    font-size: 24px;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -26,42 +30,41 @@ h1 {
 }
 
 #logoImage {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    margin-right: 24px;
 }
 
 #logoImage2 {
-    margin-left: 20px;
-    width: 40px;
-    height: 40px;
+    margin-left: 24px;
+    width: 48px;
+    height: 48px;
 }
 
 #winnerName {
     color: white;
     padding: 0px;
     margin: 0px;
-    font-size: 40px;
+    font-size: 48px;
 }
 
 #bodyBackground,
 #tableBackground {
     background-color: beige;
     border: 3px solid black;
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 100%; /* Make both boxes take full width of parent */
-    box-sizing: border-box; /* Ensure padding/border included in width */
+    padding: 12px;
+    margin-bottom: 18px;
+    width: 100%;
+    box-sizing: border-box;
 }
-
 
 #winnerImage {
     width: 100%;
-    max-width: 390px;
+    max-width: 468px;
     height: auto;
     object-fit: contain;
     display: block;
-    margin: 0 auto; /* ✅ Center horizontally */
+    margin: 0 auto;
 }
 
 #tableTitle {
@@ -78,88 +81,87 @@ h1 {
     color: orange;
 }
 
-#ConferenceLeague{
-    color:rgb(111, 201, 111);
+#ConferenceLeague {
+    color: rgb(111, 201, 111);
 }
+
 #tableBackground {
     background-color: beige;
     border: 3px solid black;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
-    position: relative; /* Enables absolute positioning inside */
+    position: relative;
     box-sizing: border-box;
 }
 
 #legend {
     position: absolute;
-    bottom: 18px;
-    right: 10px;
+    bottom: 21.6px; /* 18px × 1.2 */
+    right: 12px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    font-size: 0.9em;
-    padding: 4px 8px;
-    border-radius: 4px;
+    gap: 2.4px;
+    font-size: 1.08em;
+    padding: 5px 10px;
+    border-radius: 4.8px;
 }
 
-
 #key1, #key2, #key3 {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 #key1 {
     color: blue;
 }
-
 #key2 {
     color: orange;
 }
-
-#key3{
-    color:rgb(111, 201, 111);
+#key3 {
+    color: rgb(111, 201, 111);
 }
+
 #container {
     display: flex;
     justify-content: center; 
 }
 
 #contentContainer1 {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center;    /* center horizontally */
-  justify-content: flex-start;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;         /* center container horizontally */
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+    width: 100%;
+    max-width: 1440px; /* 1200px × 1.2 */
+    margin: 0 auto;
+    gap: 18px;
 }
 
 #textContent {
-  width: 100%;
-  max-width: 550px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    max-width: 660px; /* 550px × 1.2 */
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 600px) {
-  #contentContainer1 {
-    padding: 10px;
-    max-width: 100%;
-    gap: 10px;
-  }
+    #contentContainer1 {
+        padding: 12px;
+        max-width: 100%;
+        gap: 12px;
+    }
 
-  #textContent {
-    max-width: 100%;
-    width: 90vw; /* almost full viewport width with some padding */
-  }
+    #textContent {
+        max-width: 100%;
+        width: 90vw;
+    }
 
-  #winnerImage {
-    max-width: 90vw;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
+    #winnerImage {
+        max-width: 90vw;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
 }

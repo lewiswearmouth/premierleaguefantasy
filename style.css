@@ -123,8 +123,10 @@ h1 {
 }
 
 #container {
-    display: flex;
-    justify-content: center; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0; /* prevent flex item overflow */
 }
 
 #contentContainer1 {

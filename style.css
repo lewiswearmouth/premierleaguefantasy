@@ -170,3 +170,15 @@ h1 {
         display: block;
     }
 }
+
+#container {
+  outline: 2px dashed red;
+}
+
+#contentContainer1 {
+  outline: 2px dashed blue;
+}
+
+#textContent {
+  outline: 2px dashed green;
+}

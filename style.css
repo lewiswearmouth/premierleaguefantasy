@@ -9,16 +9,23 @@ body {
 }
 
 header {
-    background: rgb(218, 41, 28);
-    padding: 12px 12px;
-    position: relative;
+  background: rgb(218, 41, 28);
+  padding: 12px 12px;
+  position: relative;
+  border: 2px solid lime; /* debug border */
 }
 
 #banner {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
+  background: rgba(255,255,255,0.3);
+  font-size: 24px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  border: 2px dashed yellow; /* debug border */
 }
+
 
 h1 {
     margin: 0px;

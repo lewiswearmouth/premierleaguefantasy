@@ -1,11 +1,11 @@
 body {
-    background-color: rgb(3, 70, 148);
+    background-color: rgb(251, 225, 34);
     margin: 0;
     font-family: 'Gill Sans';
 }
 
 header {
-    background: rgb(219, 161, 17);
+    background: rgb(218, 41, 28);
     padding: 10px 10px;
     position: relative;
 }
@@ -38,7 +38,7 @@ h1 {
 }
 
 #winnerName {
-    color: rgb(3, 70, 148);
+    color: white;
     padding: 0px;
     margin: 0px;
     font-size: 40px;
@@ -140,7 +140,7 @@ h1 {
 }
 
 #winnerImage {
-    width: 300px;
+    width: 400px;
     height: 540px;
     margin-left: 0px; 
 }

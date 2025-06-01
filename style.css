@@ -139,6 +139,8 @@ h1 {
   width: 100%;
   max-width: 550px;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 600px) {

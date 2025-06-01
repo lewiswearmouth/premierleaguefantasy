@@ -147,32 +147,29 @@ h1 {
 }
 
 @media (max-width: 600px) {
-    body, html {
-        padding: 0;
-        margin: 0;
-    }
+  /* Remove default margins & paddings that might shift content */
+  #container,
+  #contentContainer1,
+  #textContent {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
 
-    #container {
-        padding: 0;
-        margin: 0;
-    }
+  /* Add symmetrical horizontal padding for breathing room */
+  #textContent {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
-    #contentContainer1 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #textContent {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 10px; /* add some horizontal padding */
-    }
-
-    #winnerImage {
-        max-width: 90vw;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
+  /* Center block-level elements inside */
+  #textContent > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+

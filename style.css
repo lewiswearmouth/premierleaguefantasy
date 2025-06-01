@@ -153,44 +153,40 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  /* Reset margins and paddings for these containers */
-  #container,
-  #contentContainer1,
-  #textContent {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
-
-  /* On mobile, align container to start and add side padding */
-  #container {
-    justify-content: flex-start;
-    padding-left: 12px;
-    padding-right: 12px;
-    outline: 2px solid orange; /* debugging */
-  }
-
-  /* Center contentContainer1 horizontally inside container */
+  /* Ensure banner and content container take full width and have matching horizontal padding */
+  #banner,
   #contentContainer1 {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Add breathing room padding inside textContent */
-  #textContent {
+    width: 100%;
+    max-width: 100%;
     padding-left: 12px;
     padding-right: 12px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  /* Center direct children inside textContent */
-  #textContent > * {
+  /* Text content inside contentContainer1 */
+  #textContent {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Winner image size & centering */
+  #winnerImage {
+    max-width: 90vw;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Just in case, prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
   }
 }

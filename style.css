@@ -52,29 +52,37 @@ h1 {
 
 #contentContainer1 {
     display: flex;
-    justify-content: center; 
+    align-items: center; /* ✅ Vertically center items */
+    justify-content: center;
     padding: 20px;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 30px; /* Add space between text and image */
 }
 
 #textContent {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%; 
-    max-width: 800px; 
+    gap: 15px;
 }
 
-
-#bodyBackground, #tableBackground {
+#bodyBackground,
+#tableBackground {
     background-color: beige;
     border: 3px solid black;
     padding: 10px;
-    margin-right: 0px;
     margin-bottom: 15px;
+    width: 100%; /* Make both boxes take full width of parent */
+    box-sizing: border-box; /* Ensure padding/border included in width */
 }
 
-#tableBackground {
-    margin-top: 0px; 
+
+#winnerImage {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    object-fit: contain;
 }
 
 #tableTitle {
@@ -94,12 +102,27 @@ h1 {
 #ConferenceLeague{
     color:rgb(111, 201, 111);
 }
-#legend{
+#tableBackground {
+    background-color: beige;
+    border: 3px solid black;
+    padding: 10px;
+    width: 100%;
+    position: relative; /* Enables absolute positioning inside */
+    box-sizing: border-box;
+}
+
+#legend {
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    gap:1px;
+    gap: 2px;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
+
 
 #key1, #key2, #key3 {
     padding:0;
@@ -136,8 +159,11 @@ h1 {
     display: flex;
     flex-direction: column;
     max-width: 550px;
-    margin-right: 30px; 
+    margin-right: 30px;
+    width: 100%; /* Ensure it stretches fully in the layout */
+    box-sizing: border-box;
 }
+
 
 #winnerImage {
     width: 390px;

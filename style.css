@@ -150,10 +150,19 @@ h1 {
 }
 
 @media (max-width: 600px) {
+    body, html {
+        padding: 0;
+        margin: 0;
+    }
+
+    #container {
+        padding: 0;
+        margin: 0;
+    }
+
     #contentContainer1 {
-        padding: 12px;
-        max-width: 100%;
-        gap: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #textContent {
@@ -169,16 +178,4 @@ h1 {
         margin: 0 auto;
         display: block;
     }
-}
-
-#container {
-  outline: 2px dashed red;
-}
-
-#contentContainer1 {
-  outline: 2px dashed blue;
-}
-
-#textContent {
-  outline: 2px dashed green;
 }

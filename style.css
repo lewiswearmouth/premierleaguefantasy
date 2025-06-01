@@ -9,23 +9,16 @@ body {
 }
 
 header {
-  background: rgb(218, 41, 28);
-  padding: 12px 12px;
-  position: relative;
-  border: 2px solid lime; /* debug border */
+    background: rgb(218, 41, 28);
+    padding: 12px 12px;
+    position: relative;
 }
 
 #banner {
-  background: rgba(255,255,255,0.3);
-  font-size: 24px;
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  border: 2px dashed yellow; /* debug border */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
-
 
 h1 {
     margin: 0px;
@@ -131,6 +124,8 @@ h1 {
   justify-content: center;
   width: 100%;
   min-width: 0; /* prevent flex item overflow */
+  /* outline for debugging, remove later */
+  outline: 2px solid blue;
 }
 
 #contentContainer1 {
@@ -143,6 +138,8 @@ h1 {
     max-width: 1440px; /* 1200px × 1.2 */
     margin: 0 auto;
     gap: 18px;
+    /* outline for debugging, remove later */
+    outline: 2px solid red;
 }
 
 #textContent {
@@ -151,10 +148,12 @@ h1 {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
+    /* outline for debugging, remove later */
+    outline: 2px solid green;
 }
 
 @media (max-width: 600px) {
-  /* Remove default margins & paddings that might shift content */
+  /* Reset margins and paddings for these containers */
   #container,
   #contentContainer1,
   #textContent {
@@ -167,16 +166,31 @@ h1 {
     box-sizing: border-box;
   }
 
-  /* Add symmetrical horizontal padding for breathing room */
+  /* On mobile, align container to start and add side padding */
+  #container {
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-right: 12px;
+    outline: 2px solid orange; /* debugging */
+  }
+
+  /* Center contentContainer1 horizontally inside container */
+  #contentContainer1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Add breathing room padding inside textContent */
   #textContent {
     padding-left: 12px;
     padding-right: 12px;
   }
 
-  /* Center block-level elements inside */
+  /* Center direct children inside textContent */
   #textContent > * {
     margin-left: auto;
     margin-right: auto;
   }
 }
-

@@ -1,10 +1,12 @@
 :root {
-    --red: #da291c;
-    --navy: #161b33;
-    --cream: #fff8dc;
-    --paper: #fffdf6;
-    --line: #d7c7a2;
-    --gold: #f0b429;
+    --blue: #034694;
+    --dark-blue: #001489;
+    --white: #ffffff;
+    --light-bg: #f4f7ff;
+    --line: #c7d2f0;
+
+    --accent-red: #db0007;
+
     --champions: #1f4ed8;
     --europa: #e76f51;
     --conference: #2a9d8f;
@@ -30,9 +32,9 @@ body {
     width: 100%;
     overflow-x: hidden;
     background:
-        linear-gradient(135deg, rgba(218, 41, 28, 0.08), rgba(240, 180, 41, 0.12)),
-        var(--cream);
-    color: var(--navy);
+        linear-gradient(135deg, rgba(3, 70, 148, 0.10), rgba(219, 0, 7, 0.05)),
+        var(--light-bg);
+    color: var(--dark-blue);
     font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -41,8 +43,8 @@ img {
 }
 
 header {
-    background: var(--red);
-    border-bottom: 6px solid var(--gold);
+    background: var(--blue);
+    border-bottom: 6px solid var(--accent-red);
     padding: 14px 20px;
     width: 100%;
 }
@@ -112,9 +114,9 @@ h3 {
     padding: 22px;
     background:
         linear-gradient(rgba(22, 27, 51, 0.035) 1px, transparent 1px),
-        var(--paper);
+        var(--white);
     background-size: 100% 13px;
-    border: 2px solid var(--navy);
+    border: 2px solid var(--dark-blue);
     border-radius: 4px;
     box-shadow: 0 18px 40px rgba(22, 27, 51, 0.14);
 }
@@ -137,9 +139,9 @@ h3 {
     gap: 14px;
     margin-bottom: 18px;
     padding: 8px 0;
-    border-top: 3px double var(--navy);
-    border-bottom: 3px double var(--navy);
-    color: var(--navy);
+    border-top: 3px double var(--dark-blue);
+    border-bottom: 3px double var(--dark-blue);
+    color: var(--dark-blue);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 0.82rem;
     font-weight: 700;
@@ -148,7 +150,7 @@ h3 {
 }
 
 .eyebrow {
-    color: var(--red);
+    color: var(--accent-red);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.14em;
@@ -166,7 +168,7 @@ h3 {
 .dek {
     margin-bottom: 18px;
     padding-bottom: 16px;
-    border-bottom: 2px solid var(--navy);
+    border-bottom: 2px solid var(--dark-blue);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.05rem, 2vw, 1.35rem);
     font-weight: 700;
@@ -194,7 +196,7 @@ h3 {
     margin: 0;
     padding: 10px;
     background: white;
-    border: 1px solid var(--navy);
+    border: 1px solid var(--dark-blue);
     box-shadow: inset 0 0 0 1px var(--line);
 }
 
@@ -203,7 +205,7 @@ h3 {
     display: block;
     width: 100%;
     height: auto;
-    border: 3px solid var(--navy);
+    border: 3px solid var(--dark-blue);
     border-radius: 8px;
     object-fit: cover;
 }
@@ -238,10 +240,10 @@ h3 {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 2px solid var(--navy);
+    border: 2px solid var(--dark-blue);
     border-radius: 8px 8px 0 0;
-    background: #f6e9c8;
-    color: var(--navy);
+    background: #eaf0ff;
+    color: var(--dark-blue);
     cursor: pointer;
     font-weight: 800;
     text-align: center;
@@ -251,15 +253,15 @@ h3 {
 #tab-standings:checked~.tabList label[for="tab-standings"],
 #tab-history:checked~.tabList label[for="tab-history"],
 #tab-xi:checked~.tabList label[for="tab-xi"] {
-    background: var(--navy);
+    background: var(--dark-blue);
     color: white;
 }
 
 .tabPanel {
     display: none;
     padding: 24px;
-    background: var(--paper);
-    border: 2px solid var(--navy);
+    background: var(--white);
+    border: 2px solid var(--dark-blue);
     border-radius: 0 0 8px 8px;
     box-shadow: 0 16px 30px rgba(22, 27, 51, 0.08);
 }
@@ -286,8 +288,8 @@ h3 {
 .awardGrid p {
     margin: 0;
     padding: 18px;
-    border-left: 6px solid var(--red);
-    background: #fff4f0;
+    border-left: 6px solid var(--accent-red);
+    background: #f5f8ff;
     border-radius: 8px;
 }
 
@@ -311,7 +313,7 @@ h3 {
     gap: 4px;
     min-width: 190px;
     padding: 10px 12px;
-    background: #f5edd9;
+    background: #eaf0ff;
     border: 1px solid var(--line);
     border-radius: 8px;
     font-size: 0.92rem;
@@ -365,7 +367,7 @@ h3 {
 .standingsList li strong,
 .miniStandings li strong {
     float: right;
-    color: var(--navy);
+    color: var(--dark-blue);
 }
 
 .historyGrid {
@@ -418,10 +420,10 @@ h3 {
     width: 112px;
     min-height: 56px;
     padding: 8px;
-    border: 2px solid var(--navy);
+    border: 2px solid var(--dark-blue);
     border-radius: 8px;
     background: #fffdf6;
-    color: var(--navy);
+    color: var(--dark-blue);
     font-weight: 800;
     text-align: center;
     overflow-wrap: anywhere;
@@ -494,7 +496,7 @@ h3 {
 
 @media (max-width: 640px) {
     body {
-        background: var(--cream);
+        background: var(--light-bg);
     }
 
     header {

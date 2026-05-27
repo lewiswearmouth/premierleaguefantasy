@@ -20,7 +20,6 @@ This project serves as a digital trophy case and league hub for my fantasy leagu
 
 - HTML
 - CSS
-- JavaScript
 - GitHub Pages
 
 ## Purpose
